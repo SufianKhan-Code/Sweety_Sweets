@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweety Sweets | Intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fffaf0;
+      color: #333;
+    }
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+    }
+    a {
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* === NAVBAR === */
+    header {
+      background: #d35400;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+    }
+    .logo {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      color: #fff;
+      font-weight: bold;
+    }
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* === INTRO CONTENT === */
+    .intro {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #fff3e0, #ffe0b2);
+    }
+    .intro .container {
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .intro h2 {
+      font-size: 3rem;
+      color: #d35400;
+      margin-bottom: 1rem;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 2.2rem;
+      background-color: #d35400;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .explore-btn:hover {
+      background-color: #e67e22;
+      transform: scale(1.05);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: #d35400;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #d35400;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === NAVBAR === -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sweety Sweets</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === INTRO CONTENT === -->
+  <section class="intro">
+    <div class="container">
+      <h2>Welcome to Sweety Sweets!</h2>
+      <p>
+        A delicious dream brought to life by <strong>Muneeba</strong> and <strong>Minahil</strong> — two best friends who turned their passion for baking into a magical destination for sweet lovers.
+      </p>
+      <p>
+        Our story began in a cozy little kitchen where we mixed joy, whipped up creativity, and sprinkled every dessert with love. Now, Sweety Sweets is here to serve you delightful treats that taste as good as they look.
+      </p>
+      <p>
+        From classic cakes to unique cupcakes, every bite tells a story of dedication and happiness. Step into our world and enjoy sweets made straight from the heart.
+      </p>
+      <a href="Home.html" class="explore-btn">🍰 Explore Sweety Sweets</a>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <p>© 2025 Sweety Sweets. Crafted with ♥ by Muneeba & Minahil.</p>
+  </footer>
+
+  <!-- === JAVASCRIPT === -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
